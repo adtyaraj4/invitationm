@@ -1,0 +1,82 @@
+body {
+    background-color: #0d1a2f; /* A deep, dark blue background */
+    color: #e0f7fa; /* Light, bright text for contrast */
+    font-family: 'Montserrat', sans-serif; /* A clean, modern font */
+    display: flex; /* Centers the poster container */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes the body take up the full height of the viewport */
+    margin: 0;
+    overflow: hidden; /* Hides any overflow from the background pattern */
+    text-align: center;
+}
+
+.poster-container {
+    width: 90%; /* Responsive width for mobile */
+    max-width: 500px; /* Max width for desktop */
+    padding: 40px 20px;
+    border: 2px solid #5a189a; /* A vibrant purple border */
+    border-radius: 20px;
+    background-color: rgba(14, 25, 41, 0.8); /* Semi-transparent background */
+    box-shadow: 0 0 50px rgba(90, 24, 154, 0.5); /* A glowing effect */
+    position: relative;
+    backdrop-filter: blur(10px); /* Blurs the background behind the container */
+}
+
+.poster-title {
+    font-family: 'Orbitron', sans-serif; /* A futuristic font for the title */
+    font-size: 2.5rem;
+    color: #4a5aeb; /* A bright, tech-themed blue */
+    text-shadow: 0 0 10px #4a5aeb; /* A subtle glow effect */
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.poster-details-box {
+    border: 2px solid #5a189a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 85%;
+    background-color: rgba(90, 24, 154, 0.2); /* Semi-transparent purple for the box */
+    position: relative;
+    /* Add a pseudo-element for the glowing border effect */
+}
+
+.poster-details-box::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid transparent;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #4a5aeb, #8b44c8, #b83d8a) border-box; /* A subtle gradient glow */
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.poster-slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #9bd7f5;
+    margin-top: 20px;
+}
+
+.poster-social-text {
+    font-size: 0.9rem;
+    color: #88a8c4;
+    margin-top: 30px;
+}
+
+/* --- Responsiveness: Adjust for larger screens --- */
+@media (min-width: 600px) {
+    .poster-title {
+        font-size: 3.5rem;
+    }
+    .poster-details-box {
+        width: 70%;
+    }
+}
